@@ -37,13 +37,15 @@ function rollDice() {
       if (player1TotalScore > player2TotalScore) {
         document.getElementById("result").innerText = "You Win!";
       } else if (player2TotalScore > player1TotalScore) {
-        document.getElementById("result").innerText = "CPU Wins!";
+        document.getElementById("result").innerText = "You Lose!";
       } else {
         document.getElementById("result").innerText = "It's a Draw!";
       }
 
       //after winner is declared, prints a "play again?" button
       document.getElementById("playAgain").style.display = "block";
+
+      document.getElementById("rollDice").style.display = "none";
     }
   }
 }
@@ -74,4 +76,5 @@ function resetGame() {
 
   // hide "play again?" button
   document.getElementById("playAgain").style.display = "none";
+  document.getElementById("rollDice").style.display = "block";
 }
