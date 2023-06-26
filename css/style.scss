@@ -1,4 +1,4 @@
-// Define your fonts
+// fonts
 @font-face {
     font-family: "Playfair";
     src: url("/fonts/PlayfairDisplay-Medium.ttf") format("truetype");
@@ -13,12 +13,12 @@
     font-style: normal;
   }
   
-  // Define your colors
+  // colours
   $primary-color: #2e2532;
   $secondary-color: #5e4969;
   $tertiary-color: #ffffff;
   
-  // Global
+  // global
   * {
     margin: 0;
     padding: 0;
@@ -37,7 +37,7 @@
     height: 100vh;
   }
   
-  // Font
+  // typeface
   h1, h2, h3, h4, h5, #result {
     font-family: "Playfair", serif;
     color: $tertiary-color;
@@ -104,3 +104,13 @@
     animation-duration: 0.2s;
   }
   
+  // phone 
+  @media screen and (max-width: 600px) {
+    #player-container {
+        flex-direction: column;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+    }
+}
