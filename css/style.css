@@ -1,60 +1,23 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 @font-face {
   font-family: "Playfair";
   src: url("/fonts/PlayfairDisplay-Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "SourceSansPro";
   src: url("/fonts/SourceSansPro-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
-/*COLOURS*/
-
-:root {
-  --primary-color: #2e2532;
-  --secondary-color: #5e4969;
-  --tertiary-color: #ffffff;
-}
-
-/*NORMAL CSS STARTS*/
-
-p {
-  font-family: "SourceSansPro", sans-serif;
-  margin: 1rem;
-  color: var(--tertiary-color);
-}
-
-img {
-  height: auto;
-  border-radius: 8px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-#result {
-  font-family: "Playfair", serif;
-  color: var(--tertiary-color);
-}
-
-h1 {
-  margin: 1rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--primary-color);
+  background: #2e2532;
   min-width: 320px;
   max-width: 700px;
   margin: 0 auto;
@@ -65,16 +28,30 @@ body {
   height: 100vh;
 }
 
-#player1,
-#player2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2rem;
+h1, h2, h3, h4, h5, #result {
+  font-family: "Playfair", serif;
+  color: #ffffff;
+}
+h1.margin, h2.margin, h3.margin, h4.margin, h5.margin, #result.margin {
+  margin: 1rem;
 }
 
-#player-container {
-  display: flex;
+p {
+  font-family: "SourceSansPro", sans-serif;
+  margin: 1rem;
+  color: #ffffff;
+}
+
+#result {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+img {
+  height: auto;
+  border-radius: 8px;
+  width: 50px;
+  height: 50px;
 }
 
 button {
@@ -84,12 +61,29 @@ button {
   border-radius: 8px;
 }
 
-#result {
-  font-size: 24px;
-  font-weight: bold;
+#player-container {
+  display: flex;
+}
+#player-container #player1,
+#player-container #player2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
 }
 
-img {
-  width: 50px;
-  height: 50px;
+@keyframes buttonClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
+.animate {
+  animation-name: buttonClick;
+  animation-duration: 0.2s;
+}/*# sourceMappingURL=style.css.map */
