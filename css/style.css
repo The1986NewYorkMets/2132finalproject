@@ -14,10 +14,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 body {
-  background: #2e2532;
+  background: linear-gradient(to right, #2e2532 0%, #40344d 25%, #554860 50%, #6a5c73 75%, #5e4969 100%);
   min-width: 320px;
   max-width: 700px;
   margin: 0 auto;
@@ -26,11 +27,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, #result {
   font-family: "Playfair", serif;
   color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 h1.margin, h2.margin, h3.margin, h4.margin, h5.margin, #result.margin {
   margin: 1rem;
@@ -40,6 +43,7 @@ p {
   font-family: "SourceSansPro", sans-serif;
   margin: 1rem;
   color: #ffffff;
+  line-height: 1.6;
 }
 
 #result {
@@ -54,7 +58,7 @@ img {
   border-radius: 8px;
   width: 50px;
   height: 50px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 button {
@@ -62,10 +66,17 @@ button {
   padding: 10px 20px;
   font-size: 20px;
   border-radius: 8px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fdd835;
+  color: #2e2532;
+  font-weight: bold;
 }
 button:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+button:active {
+  transform: translateY(0);
 }
 
 #player-container {
@@ -77,6 +88,8 @@ button:hover {
   flex-direction: column;
   align-items: center;
   margin: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  min-width: 150px;
 }
 #player-container #player1total,
 #player-container #player2total {
